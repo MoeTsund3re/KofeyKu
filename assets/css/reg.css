@@ -110,7 +110,6 @@ a {
     font-size: 42px;
     font-weight: 400;
     color: white;
-    padding-right: 220px;
 }
 
 .registr{
@@ -132,7 +131,7 @@ a {
     width: 600px;
     height: 60px;
     font-size: 32px;
-    margin-top: 20px;
+    margin-top: 30px;
     border-radius: 10px;
     border: none;
 }
