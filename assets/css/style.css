@@ -592,21 +592,21 @@ header {
     }
 
     .pop_card_1_ {
-        background-image: url(/assets/img/pop1.png);
+
         width: 300px;
         height: 300px;
         border-radius: 10px;
     }
 
     .pop_card_2_ {
-        background-image: url(/assets/img/pop2.png);
+
         width: 300px;
         height: 300px;
         border-radius: 10px;
     }
 
     .pop_card_3_ {
-        background-image: url(/assets/img/pop3.png);
+
         width: 300px;
         height: 300px;
         border-radius: 10px;
@@ -633,21 +633,21 @@ header {
     }
 
     .catalog_card_1_ {
-        background-image: url(/assets/img/catalog1.png);
+     
         width: 300px;
         height: 300px;
         border-radius: 10px;
     }
 
     .catalog_card_2_ {
-        background-image: url(/assets/img/catalog2.png);
+        
         width: 300px;
         height: 300px;
         border-radius: 10px;
     }
 
     .catalog_card_3_ {
-        background-image: url(/assets/img/catalog3.png);
+        
         width: 300px;
         height: 300px;
         border-radius: 10px;
@@ -820,21 +820,21 @@ header {
 
     /* pop */
     .pop_card_1_ {
-        background-image: url(/assets/img/pop1.png);
+
         width: 250px;
         height: 250px;
         border-radius: 10px;
     }
 
     .pop_card_2_ {
-        background-image: url(/assets/img/pop2.png);
+
         width: 250px;
         height: 250px;
         border-radius: 10px;
     }
 
     .pop_card_3_ {
-        background-image: url(/assets/img/pop3.png);
+
         width: 250px;
         height: 250px;
         border-radius: 10px;
@@ -864,21 +864,21 @@ header {
 
     /* catalog */
     .catalog_card_1_ {
-        background-image: url(/assets/img/catalog1.png);
+
         width: 250px;
         height: 250px;
         border-radius: 10px;
     }
 
     .catalog_card_2_ {
-        background-image: url(/assets/img/catalog2.png);
+
         width: 250px;
         height: 250px;
         border-radius: 10px;
     }
 
     .catalog_card_3_ {
-        background-image: url(/assets/img/catalog3.png);
+
         width: 250px;
         height: 250px;
         border-radius: 10px;
