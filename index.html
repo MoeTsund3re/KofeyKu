@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="header_inner">
+        <div class="header_left">
+          <div class="logo"><img src="assets/img/Frame.png" alt="" /></div>
+          <div class="header_nav">
+            <div class="product">
+              <button onclick="myFunction_()" class="product_btn">
+                Product ∨
+              </button>
+              <div class="product_content" id="myProductDropdown">
+                <a href="#">Ссылка 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+              </div>
+            </div>
+            <!-- SCRIPT -->
+            <script>
+              function myFunction_() {
+                document
+                  .getElementById("myProductDropdown")
+                  .classList.toggle("show");
+              }
+              window.onclick = function (event) {
+                if (!event.target.matches(".product_btn")) {
+                  var dropdowns =
+                    document.getElementsByClassName("product_content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show")) {
+                      openDropdown.classList.remove("show");
+                    }
+                  }
+                }
+              };
+            </script>
+            <!-- SCRIPT -->
+            <div class="developer">
+              <button onclick="myFunction()" class="developer_btn">
+                Developer ∨
+              </button>
+              <div class="developer_content" id="myDeveloperDropdown">
+                <a href="#">Ссылка 1</a>
+                <a href="#">Ссылка 2</a>
+                <a href="#">Ссылка 3</a>
+              </div>
+            </div>
+            <!-- SCRIPT -->
+            <script>
+              function myFunction() {
+                document
+                  .getElementById("myDeveloperDropdown")
+                  .classList.toggle("show_");
+              }
+              window.onclick = function (event) {
+                if (!event.target.matches(".developer_btn")) {
+                  var dropdowns =
+                    document.getElementsByClassName("developer_content");
+                  var i;
+                  for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains("show_")) {
+                      openDropdown.classList.remove("show_");
+                    }
+                  }
+                }
+              };
+            </script>
+
+            <!-- SCRIPT -->
+            <a href="#">Beta</a>
+            <a href="#">Pricing</a>
+          </div>
+        </div>
+        <div class="header_right">
+          <div class="right_btn">Start your project</div>
+
+
+          <div class="sign">
+            <button class="mbtn" onclick="showModal('login')">Sign in</button>
+            <div class="modal" id="modal_login">
+              <div class="modal_content">
+                <div class="reg">
+                  <h3>Авторизация</h3>
+                  <p>Логин</p>
+                  <input type="text" placeholder="Введите логин">
+                  <p>Пароль</p>
+                  <input type="password" placeholder="Введите пароль">
+                  <div class="sign_in_btn"><a href="#">Войти</a></div>
+                  <button class="mbtn_reg" onclick="showModal('register')">еще нет аккаунта?</button>
+                </div>
+                <div class="hide">
+                  <span class="hideX" onclick="hideModal('login')">x</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal" id="modal_register" style="display: none;">
+              <div class="modal_content">
+                <div class="reg">
+                  <h3>Регистрация</h3>
+                  <p>Логин</p>
+                  <input type="text" placeholder="Введите логин">
+                  <p>Пароль</p>
+                  <input type="password" placeholder="Введите пароль">
+                  <p>Подтвердите пароль</p>
+                  <input type="password" placeholder="Подтвердите пароль">
+                  <div class="sign_in_btn"><a href="#">Зарегистрироваться</a></div>
+                  <button class="mbtn_reg" onclick="showModal('login')">Уже есть аккаунт?</button>
+                </div>
+                <div class="hide">
+                  <span class="hideX" onclick="hideModal('register')">x</span>
+                </div>
+              </div>
+            </div>
+
+            <script>
+              function showModal(type) {
+                if (type === 'login') {
+                  document.getElementById("modal_login").style.display = "flex";
+                  document.getElementById("modal_register").style.display = "none";
+                } else if (type === 'register') {
+                  document.getElementById("modal_register").style.display = "flex";
+                  document.getElementById("modal_login").style.display = "none";
+                }
+              }
+
+              function hideModal(type) {
+                if (type === 'login') {
+                  document.getElementById("modal_login").style.display = "none";
+                } else if (type === 'register') {
+                  document.getElementById("modal_register").style.display = "none";
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+  </header>
+  <div class="banner">
+    <div class="banner_inner container">
+      <div class="banner_left">
+        <div class="storage">
+          <img src="assets/img/Frame (1).png" alt="" />Storage
+        </div>
+        <div class="title">
+          <div class="banner_title">Store and serve</div>
+          <div class="banner_title_">any type of digital content</div>
+        </div>
+        <div class="banner_text">
+          <div class="text">
+            An open source Object store service with unlimited scalability,
+            for any file type.
+          </div>
+          <div class="text_">
+            With custom policies and permissions that are familiar and easy to
+            implement.
+          </div>
+        </div>
+        <div class="banner_btn">Start a project</div>
+      </div>
+      <div class="banner_right">
+        <img src="assets/img/Rectangle.png" alt="" />
+      </div>
+    </div>
+  </div>
+  <div class="adv">
+    <div class="adv_inner container">
+      <div class="adv_card">
+        <div class="adv_top">
+          <div class="adv_img">
+            <img src="assets/img/adv/Frame (2).png" alt="" />
+          </div>
+          <div class="adv_title">Interoperable</div>
+        </div>
+        <div class="adv_bot">
+          Integrates well with the rest of Supabase ecosystem, including Auth
+          and Postgres.
+        </div>
+      </div>
+      <div class="adv_card">
+        <div class="adv_top">
+          <div class="adv_img">
+            <img src="assets/img/adv/Frame (3).png " alt="" />
+          </div>
+          <div class="adv_title">Lightning fast</div>
+        </div>
+        <div class="adv_bot">
+          Thin API server layer that leverages Postgres' permissions and
+          performance.
+        </div>
+      </div>
+      <div class="adv_card">
+        <div class="adv_top">
+          <div class="adv_img">
+            <img src="assets/img/adv/Frame (4).png" alt="" />
+          </div>
+          <div class="adv_title">Dependable</div>
+        </div>
+        <div class="adv_bot_">
+          Enterprise-level scalability and durability.
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- media -->
+  <div class="media_inner">
+    <div class="left_content">
+      <div class="menu_media">
+        <a href="#" class="media_link media_link_active" data_content="file_previews">File previews</a>
+        <a href="#" class="media_link" data_content="column_view">Column view</a>
+        <a href="#" class="media_link" data_content="list_view">List view</a>
+        <a href="#" class="media_link" data_content="multi_select">Multi select actions</a>
+        <a href="#" class="media_link" data_content="path_navigator">Path navigator</a>
+      </div>
+      <img src="assets/img/media/Frame (5).png" alt="" id="media_image">
+    </div>
+    <div class="right_content" id="right_content">
+      <p class="right_text" id="right_title">File previews</p>
+      <p class="right_text_reg" id="right_description">Preview any media type, including video and audio.</p>
+
+      <div class="right_block" id="right_block">
+        <h4 class="right_block_title">Profile management example</h4>
+        <p class="right_block_text">Update a user account with public profile information, including uploading a profile
+          image.</p>
+        <div class="right_block_bott">
+          <p>Created by: <span><img src="assets/img/media/Frame.png" alt=""></span> supabase</p>
+        </div>
+      </div>
+      <div class="right_block_second">
+        <p id="nextjs_title">nextjs_ts_user_management</p>
+        <a href="#" class="deploy">
+          <img src="assets/img/media/github.svg" alt="">
+        </a>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.querySelectorAll('.media_link').forEach(link => {
+      link.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        document.querySelectorAll('.media_link').forEach(l => l.classList.remove('media_link_active'));
+
+        this.classList.add('media_link_active');
+
+        const contentId = this.getAttribute('data_content');
+        updateContent(contentId);
+      });
+    });
+
+    function updateContent(contentId) {
+      const rightTitle = document.getElementById('right_title');
+      const mediaImage = document.getElementById('media_image');
+      const rightBlock = document.getElementById('right_block');
+      const nextjsTitle = document.getElementById('nextjs_title');
+
+      switch (contentId) {
+        case 'file_previews':
+          rightTitle.textContent = 'GA';
+          mediaImage.src = 'assets/img/media/Frame (5).png';
+          break;
+        case 'column_view':
+          rightTitle.textContent = 'GAGA';
+          mediaImage.src = 'assets/img/media/GAGA.jpg';
+          break;
+        case 'list_view':
+          rightTitle.textContent = 'GAGAGA';
+          mediaImage.src = 'assets/img/media/GAGAGA.png';
+          break;
+        case 'multi_select':
+          rightTitle.textContent = 'GAGAGAGA';
+          mediaImage.src = 'assets/img/media/GA.webp';
+          break;
+        case 'path_navigator':
+          rightTitle.textContent = 'GAGAGAGAGA';
+          mediaImage.src = 'assets/img/media/GAGAGAGA.png';
+          break;
+      }
+    }
+  </script>
+
+  <!-- media -->
+
+  <!-- ACCORDION -->
+  <div class="faq">
+    <div class="faq_inner container">
+      <div class="faq_title">Integrates natively <br> with Supabase Auth</div>
+      <!--  --><!--  --><!--  --><!--  --><!--  -->
+      <div class="list">
+        <div class="acc_btn"><button class="accordion">Using Postgres Row Level Security to create Object access rules.
+          </button>
+          <p class="arrow">⋁</p>
+        </div>
+        <div class="panel">
+          <p>Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres
+            functions, and even your own metadata to write policies.Storage Authorization is built around Postgres so
+            that you can use any combination of SQL, Postgres functions, and even your own metadata to write
+            policies.Storage is built around Postgres so that you can use any combination of SQL, Postgres functions,
+            and even your own metadata to write policies.</p>
+          <div class="list_btn"><img src="assets/img/faq/Frame.png" alt=""> Expore documentation</div>
+        </div>
+
+        <div class="acc_btn"><button class="accordion">Using Postgres Row Level Security to create Object access rules.
+          </button>
+          <p class="arrow">⋁</p>
+        </div>
+        <div class="panel">
+          <p>Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres
+            functions, and even your own metadata to write policies.Storage Authorization is built around Postgres so
+            that you can use any combination of SQL, Postgres functions, and even your own metadata to write
+            policies.Storage is built around Postgres so that you can use any combination of SQL, Postgres functions,
+            and even your own metadata to write policies.</p>
+          <div class="list_btn"><img src="assets/img/faq/Frame.png" alt=""> Expore documentation</div>
+        </div>
+
+        <div class="acc_btn"><button class="accordion">Using Postgres Row Level Security to create Object access rules.
+          </button>
+          <p class="arrow">⋁</p>
+        </div>
+        <div class="panel">
+          <p>Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres
+            functions, and even your own metadata to write policies.Storage Authorization is built around Postgres so
+            that you can use any combination of SQL, Postgres functions, and even your own metadata to write
+            policies.Storage is built around Postgres so that you can use any combination of SQL, Postgres functions,
+            and even your own metadata to write policies.</p>
+          <div class="list_btn"><img src="assets/img/faq/Frame.png" alt=""> Expore documentation</div>
+        </div>
+        <div class="acc_btn"><button class="accordion">Using Postgres Row Level Security to create Object access rules.
+          </button>
+          <p class="arrow">⋁</p>
+        </div>
+        <div class="panel">
+          <p>Storage Authorization is built around Postgres so that you can use any combination of SQL, Postgres
+            functions, and even your own metadata to write policies.Storage Authorization is built around Postgres so
+            that you can use any combination of SQL, Postgres functions, and even your own metadata to write
+            policies.Storage is built around Postgres so that you can use any combination of SQL, Postgres functions,
+            and even your own metadata to write policies.</p>
+          <div class="list_btn"><img src="assets/img/faq/Frame.png" alt=""> Expore documentation</div>
+        </div>
+      </div>
+      <script>
+        var acc = document.getElementsByClassName("acc_btn");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+              panel.style.display = "none";
+            } else {
+              panel.style.display = "block";
+            }
+          });
+        }
+      </script>
+      <!--  --><!--  --><!--  --><!--  --><!--  -->
+      <!--ACCORDION   -->
+      <!-- footer -->
+      <footer class="footer">
+        <div class="container">
+          <div class="footer_inner">
+            <div class="footer_left">
+              <a href="#">
+                <img src="assets/img/Frame.png" alt="logo" />
+              </a>
+              <div class="footer_icons">
+                <a href="#">
+                  <img src="assets/img/footer/twitter.svg" alt="footer_icon" />
+                </a>
+                <a href="#">
+                  <img src="assets/img/footer/github.svg" alt="footer_icon" />
+                </a>
+              </div>
+            </div>
+
+            <div class="footer_menu">
+              <a href="#" class="footer_link_ footer-menu_active"><span style="color: #666666;">Product</span></a>
+              <a href="#" class="footer_link">Database</a>
+              <a href="#" class="footer_link">Authentication</a>
+              <a href="#" class="footer_link">Storage</a>
+              <a href="#" class="footer_link">Functions<br />Coming soon</a>
+              <a href="#" class="footer_link">Pricing</a>
+            </div>
+
+            <div class="footer_menu">
+              <a href="#" class="footer_link_ footer-menu_active"> <span style="color: #666666;">Resources</span> </a>
+              <a href="#" class="footer_link">Support</a>
+              <a href="#" class="footer_link">Case Studies</a>
+              <a href="#" class="footer_link">System Status</a>
+              <a href="#" class="footer_link">Terms of service</a>
+            </div>
+
+            <div class="footer_menu">
+              <a href="#" class="footer_link_ footer-menu_active"><span style="color: #666666;">Developers</span> </a>
+              <a href="#" class="footer_link">Documentation</a>
+              <a href="#" class="footer_link">API Reference</a>
+              <a href="#" class="footer_link">Guides</a>
+            </div>
+
+            <div class="footer_menu">
+              <a href="#" class="footer_link_ footer-menu_active"><span style="color: #666666;">Company</span> </a>
+              <a href="#" class="footer_link">Blog</a>
+              <a href="#" class="footer_link">Open Source</a>
+              <a href="#" class="footer_link">Humans.txt</a>
+              <a href="#" class="footer_link">Lawyers.txt</a>
+            </div>
+          </div>
+
+          <div class="footer_bott">
+            <a href="#" class="copy"> © Supabase Inc </a>
+
+            <div class="footer_bott_icons">
+              <a href="#">
+                <img src="assets/img/footer/sun.svg" alt="icon" />
+              </a>
+              <a href="#">
+                <img src="assets/img/footer/switch.png" alt="icon" />
+              </a>
+              <a href="#">
+                <img src="assets/img/footer/moon.svg" alt="icon" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- end-footer -->
+</body>
+
+</html>
