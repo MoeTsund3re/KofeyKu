@@ -610,7 +610,72 @@ a {
 /*  */
 /*  */
 /* accordion */
+/* slider */
 
+.slider {
+    margin-bottom: 100px;
+    background-color: #000000;
+    padding: 40px 0;
+}
+
+.slider__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.slider__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 25px;
+}
+
+.slider__item {
+    flex: 0 0 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider__img {
+    width: 900px;
+    border-radius: 8px;
+    height: 600px;
+}
+
+.slider__description {
+    margin-top: 12px;
+    color: #E0E0E0;
+}
+
+.slider__controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.slider__btn {
+    background-color: #915e01;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.slider__btn:hover {
+    background-color: #000000;
+    border: 1px solid #915e01;
+}
+
+/* end-slider */
 /* footer */
 
 .footer_inner {
