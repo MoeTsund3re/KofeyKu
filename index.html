@@ -381,6 +381,63 @@
       </script>
       <!--  --><!--  --><!--  --><!--  --><!--  -->
       <!--ACCORDION   -->
+         <!-- slider -->
+    <div class="slider">
+        <div class="container">
+            <h2 class="slider__title">Слайдер</h2>
+            <div class="slider__inner">
+                <div class="prev_page">
+                    <button class="slider__btn slider__btn--prev">Prev</button>
+                </div>
+                <div class="all_sliders">
+                    <div class="slider__item">
+                        <img src="assets/img/slider/img1.jpg" alt="Slide 1" class="slider__img">
+                        <p class="slider__description">ХИХАХА</p>
+                    </div>
+                    <div class="slider__item">
+                        <img src="assets/img/slider/img2.jpg" alt="Slide 2" class="slider__img">
+                        <p class="slider__description">ХАХАХИХИ</p>
+                    </div>
+                    <div class="slider__item">
+                        <img src="assets/img/slider/img3.jpg" alt="Slide 3" class="slider__img">
+                        <p class="slider__description">ХАХИХА</p>
+                    </div>
+                </div>
+                <div class="next_page">
+                    <button class="slider__btn slider__btn--next">Next</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        let currentIndex = 0;
+        const items = document.querySelectorAll('.slider__item');
+        const prevBtn = document.querySelector('.slider__btn--prev');
+        const nextBtn = document.querySelector('.slider__btn--next');
+
+        function showSlide(index) {
+            items.forEach((item, i) => {
+                item.style.display = i === index ? 'block' : 'none';
+            });
+        }
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : items.length - 1;
+            showSlide(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex < items.length - 1) ? currentIndex + 1 : 0;
+            showSlide(currentIndex);
+        });
+
+        // Инициализация
+        showSlide(currentIndex);
+    </script>
+    <!-- end-slider -->
       <!-- footer -->
       <footer class="footer">
         <div class="container">
